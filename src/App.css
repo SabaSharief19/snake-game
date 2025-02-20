@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+/* General styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Game container */
+.game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Score display */
+.score {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 15px;
+  border-radius: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Game board */
+.game-board {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  background-color: #222;
+  border: 10px solid #444;
+  box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.5);
+}
+
+/* Individual cells */
+.cell {
+  width: 100%;
+  height: 100%;
+}
+
+/* Snake styling */
+.snake {
+  background-color: limegreen;
+  border-radius: 5px;
+  box-shadow: 0 0 10px lime;
+}
+
+/* Food styling */
+.food {
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px red;
+}
+
+/* Game Over text */
+.game-over {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 15px;
+  border-radius: 10px;
 }
